@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Honeypot Flight Recorder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <p class="brand-name">Flight Recorder</p>
+        <p class="brand-sub">Adaptive Honeypot · Phase 3</p>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span id="ws-status" class="pill pill-warn">Connecting…</span>
+      <span id="stat-active" class="stat">0 active</span>
+      <span id="stat-events" class="stat">0 events</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel sessions-panel">
+      <div class="panel-head">
+        <h2>Sessions</h2>
+        <div class="filters">
+          <button type="button" class="chip active" data-filter="all">All</button>
+          <button type="button" class="chip" data-filter="active">Active</button>
+          <button type="button" class="chip" data-filter="completed">Done</button>
+        </div>
+      </div>
+      <ul id="session-list" class="session-list"></ul>
+    </section>
+
+    <section class="panel detail-panel">
+      <div class="panel-head">
+        <h2 id="detail-title">Select a session</h2>
+        <div class="detail-actions">
+          <button type="button" id="btn-timeline" class="btn" disabled>Timeline</button>
+          <button type="button" id="btn-replay" class="btn btn-accent" disabled>Replay</button>
+        </div>
+      </div>
+      <div id="session-meta" class="session-meta empty">Click a session to inspect commands, files, and SQL.</div>
+      <div class="detail-grid">
+        <div>
+          <h3>Commands</h3>
+          <ul id="command-list" class="data-list"></ul>
+        </div>
+        <div>
+          <h3>Files accessed</h3>
+          <ul id="file-list" class="data-list"></ul>
+        </div>
+      </div>
+      <div id="timeline-view" class="timeline hidden"></div>
+      <div id="replay-view" class="replay hidden">
+        <div class="replay-bar">
+          <button type="button" id="replay-play" class="btn btn-accent">Play</button>
+          <button type="button" id="replay-stop" class="btn">Stop</button>
+          <span id="replay-progress" class="muted">—</span>
+        </div>
+        <pre id="replay-term" class="terminal" aria-live="polite"></pre>
+      </div>
+    </section>
+
+    <section class="panel live-panel">
+      <div class="panel-head">
+        <h2>Live stream</h2>
+        <span class="muted">newest first · no refresh</span>
+      </div>
+      <ul id="live-feed" class="live-feed"></ul>
+    </section>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "hostname": "build-server-01",
+  "fqdn": "build-server-01.acme-tech.internal",
+  "os": "Ubuntu 24.04.4 LTS",
+  "kernel": "6.8.0-51-generic",
+  "arch": "x86_64",
+  "uptime": "up 47 days, 3:12",
+  "default_user": "developer",
+  "users": [
+    {
+      "username": "developer",
+      "uid": 1000,
+      "gid": 1000,
+      "home": "/home/developer",
+      "shell": "/bin/bash",
+      "groups": ["developer", "docker", "sudo"],
+      "password_hint": "Welcome1!"
+    },
+    {
+      "username": "admin",
+      "uid": 1001,
+      "gid": 1001,
+      "home": "/home/admin",
+      "shell": "/bin/bash",
+      "groups": ["admin", "sudo"],
+      "password_hint": "admin123"
+    },
+    {
+      "username": "jenkins",
+      "uid": 1002,
+      "gid": 1002,
+      "home": "/home/jenkins",
+      "shell": "/bin/bash",
+      "groups": ["jenkins", "docker"],
+      "password_hint": "jenkins"
+    },
+    {
+      "username": "backup",
+      "uid": 1003,
+      "gid": 1003,
+      "home": "/home/backup",
+      "shell": "/bin/bash",
+      "groups": ["backup"],
+      "password_hint": "backup"
+    },
+    {
+      "username": "finance",
+      "uid": 1004,
+      "gid": 1004,
+      "home": "/home/finance",
+      "shell": "/bin/bash",
+      "groups": ["finance"],
+      "password_hint": "finance2026"
+    },
+    {
+      "username": "intern",
+      "uid": 1005,
+      "gid": 1005,
+      "home": "/home/intern",
+      "shell": "/bin/bash",
+      "groups": ["intern"],
+      "password_hint": "intern"
+    }
+  ]
+}

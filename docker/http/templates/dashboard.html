@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard — Acme Portal</title>
+  <style>
+    body { margin: 0; font-family: "Segoe UI", Tahoma, sans-serif; background: #eef3f8; color: #10233f; }
+    header { background: #0b1f38; color: #fff; padding: 0.9rem 1.5rem; display: flex; justify-content: space-between; }
+    nav a { color: #c9d7ea; margin-left: 1rem; text-decoration: none; }
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1.25rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.25rem; }
+    .tile { background: #fff; border: 1px solid #d5e0ec; border-radius: 10px; padding: 1rem; }
+    .tile strong { display: block; font-size: 1.35rem; margin-top: 0.35rem; }
+    a.cardlink { color: inherit; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Acme Employee Portal</strong>
+    <nav>
+      <a href="/announcements">Announcements</a>
+      <a href="/helpdesk">IT Helpdesk</a>
+      <a href="/hr">HR</a>
+      <a href="/finance">Finance</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Welcome, {{ user }}</h1>
+    <p>Signed in to the Acme internal portal.</p>
+    <div class="grid">
+      <a class="cardlink tile" href="/announcements"><div>Announcements<strong>3 new</strong></div></a>
+      <a class="cardlink tile" href="/helpdesk"><div>Open tickets<strong>7</strong></div></a>
+      <a class="cardlink tile" href="/hr"><div>PTO balance<strong>12 days</strong></div></a>
+      <a class="cardlink tile" href="/finance"><div>Expense reports<strong>2 pending</strong></div></a>
+    </div>
+  </main>
+</body>
+</html>

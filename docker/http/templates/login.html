@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — Acme Employee Portal</title>
+  <style>
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(160deg, #0b1f38, #163a63);
+      color: #e8eef7;
+    }
+    form {
+      width: min(380px, 92vw); background: #102841; padding: 2rem;
+      border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
+    }
+    h2 { margin-top: 0; }
+    label { display: block; margin: 0.85rem 0 0.3rem; color: #9bb0c9; font-size: 0.9rem; }
+    input {
+      width: 100%; padding: 0.65rem 0.75rem; border-radius: 8px;
+      border: 1px solid #33506f; background: #0b1f38; color: #e8eef7;
+    }
+    button {
+      margin-top: 1.25rem; width: 100%; padding: 0.75rem; border: 0; border-radius: 8px;
+      background: #0b6bcb; color: white; font-weight: 600; cursor: pointer;
+    }
+    .error { color: #ff8f8f; margin-top: 0.75rem; font-size: 0.9rem; }
+    .hint { margin-top: 1rem; font-size: 0.8rem; color: #7f94ad; }
+    a { color: #9bb0c9; }
+  </style>
+</head>
+<body>
+  <form method="post" action="/login">
+    <h2>Employee Login</h2>
+    <label for="username">Username</label>
+    <input id="username" name="username" autocomplete="username" required />
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required />
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    <button type="submit">Sign in</button>
+    <p class="hint">Demo: admin / admin123 · developer / Welcome1!</p>
+    <p style="margin-top:1rem;font-size:0.85rem"><a href="/">← Back</a></p>
+  </form>
+</body>
+</html>

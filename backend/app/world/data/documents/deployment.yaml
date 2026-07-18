@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atlas-api
+  namespace: platform
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: atlas-api
+  template:
+    metadata:
+      labels:
+        app: atlas-api
+    spec:
+      containers:
+        - name: api
+          image: registry.acme-tech.internal/platform/atlas-api:1.18.2
+          ports:
+            - containerPort: 8000

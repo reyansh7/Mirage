@@ -1,0 +1,28 @@
+{
+  "interfaces": [
+    {
+      "name": "lo",
+      "addrs": ["127.0.0.1/8", "::1/128"]
+    },
+    {
+      "name": "eth0",
+      "mac": "02:42:ac:1c:00:0b",
+      "addrs": ["10.0.5.18/24"],
+      "gateway": "10.0.5.1",
+      "dns": ["10.0.5.1", "1.1.1.1"]
+    }
+  ],
+  "hostname": "build-server-01",
+  "domain": "acme-tech.internal",
+  "routes": [
+    "default via 10.0.5.1 dev eth0",
+    "10.0.5.0/24 dev eth0 proto kernel scope link src 10.0.5.18"
+  ],
+  "listening": [
+    {"port": 22, "proto": "tcp", "process": "sshd"},
+    {"port": 80, "proto": "tcp", "process": "apache2"},
+    {"port": 3306, "proto": "tcp", "process": "mysqld"},
+    {"port": 6379, "proto": "tcp", "process": "redis-server"},
+    {"port": 8080, "proto": "tcp", "process": "java"}
+  ]
+}

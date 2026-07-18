@@ -1,0 +1,15 @@
+{
+  "name": "Acme Technologies",
+  "industry": "Cloud Software",
+  "employees": 420,
+  "founded": 2014,
+  "hq": "Austin, TX",
+  "domain": "acme-tech.internal",
+  "tagline": "Shipping reliable cloud infrastructure",
+  "departments": ["Engineering", "DevOps", "Finance", "HR", "Security"],
+  "banner": [
+    "Welcome to Acme Technologies",
+    "Unauthorized access is prohibited and monitored.",
+    "Contact: security@acme-tech.internal"
+  ]
+}

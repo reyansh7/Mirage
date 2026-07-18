@@ -1,0 +1,94 @@
+{
+  "services": {
+    "apache2": {
+      "unit": "apache2.service",
+      "description": "The Apache HTTP Server",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:22 UTC; 1 month 17 days ago"
+    },
+    "docker": {
+      "unit": "docker.service",
+      "description": "Docker Application Container Engine",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:18 UTC; 1 month 17 days ago"
+    },
+    "redis": {
+      "unit": "redis-server.service",
+      "description": "Advanced key-value store",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:25 UTC; 1 month 17 days ago"
+    },
+    "redis-server": {
+      "unit": "redis-server.service",
+      "description": "Advanced key-value store",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:25 UTC; 1 month 17 days ago"
+    },
+    "mysql": {
+      "unit": "mysql.service",
+      "description": "MySQL Community Server",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:30 UTC; 1 month 17 days ago"
+    },
+    "mysqld": {
+      "unit": "mysql.service",
+      "description": "MySQL Community Server",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:30 UTC; 1 month 17 days ago"
+    },
+    "jenkins": {
+      "unit": "jenkins.service",
+      "description": "Jenkins Continuous Integration Server",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:15:02 UTC; 1 month 17 days ago"
+    },
+    "ssh": {
+      "unit": "ssh.service",
+      "description": "OpenBSD Secure Shell server",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:10 UTC; 1 month 17 days ago"
+    },
+    "sshd": {
+      "unit": "ssh.service",
+      "description": "OpenBSD Secure Shell server",
+      "load": "loaded",
+      "active": "active",
+      "sub": "running",
+      "since": "Mon 2026-06-01 09:14:10 UTC; 1 month 17 days ago"
+    },
+    "git": {
+      "unit": "git-daemon.service",
+      "description": "Git daemon",
+      "load": "loaded",
+      "active": "inactive",
+      "sub": "dead",
+      "since": "n/a"
+    }
+  },
+  "processes": [
+    {"pid": 1, "user": "root", "cmd": "/sbin/init"},
+    {"pid": 412, "user": "root", "cmd": "/usr/sbin/sshd -D"},
+    {"pid": 891, "user": "www-data", "cmd": "/usr/sbin/apache2 -k start"},
+    {"pid": 1022, "user": "mysql", "cmd": "/usr/sbin/mysqld"},
+    {"pid": 1188, "user": "redis", "cmd": "/usr/bin/redis-server 127.0.0.1:6379"},
+    {"pid": 1402, "user": "jenkins", "cmd": "java -jar /usr/share/java/jenkins.war"},
+    {"pid": 2011, "user": "root", "cmd": "/usr/bin/dockerd -H fd://"},
+    {"pid": 3340, "user": "developer", "cmd": "bash"}
+  ]
+}

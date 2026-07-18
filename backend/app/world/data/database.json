@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {"id": 1, "name": "Alice Johnson", "email": "alice.johnson@acme-tech.internal", "department": "DevOps", "title": "Senior DevOps Engineer"},
+    {"id": 2, "name": "Bob Smith", "email": "bob.smith@acme-tech.internal", "department": "Engineering", "title": "Backend Engineer"},
+    {"id": 3, "name": "David Lee", "email": "david.lee@acme-tech.internal", "department": "Security", "title": "Security Analyst"},
+    {"id": 4, "name": "Maria Garcia", "email": "maria.garcia@acme-tech.internal", "department": "Finance", "title": "Finance Manager"},
+    {"id": 5, "name": "Chris Patel", "email": "chris.patel@acme-tech.internal", "department": "HR", "title": "HR Business Partner"},
+    {"id": 6, "name": "Sam Rivera", "email": "sam.rivera@acme-tech.internal", "department": "Engineering", "title": "Frontend Engineer"},
+    {"id": 7, "name": "Jordan Kim", "email": "jordan.kim@acme-tech.internal", "department": "DevOps", "title": "Platform Engineer"}
+  ],
+  "departments": [
+    {"id": 1, "name": "Engineering", "head": "Bob Smith", "budget": 2400000},
+    {"id": 2, "name": "DevOps", "head": "Alice Johnson", "budget": 980000},
+    {"id": 3, "name": "Finance", "head": "Maria Garcia", "budget": 450000},
+    {"id": 4, "name": "HR", "head": "Chris Patel", "budget": 320000},
+    {"id": 5, "name": "Security", "head": "David Lee", "budget": 610000}
+  ],
+  "projects": [
+    {"id": 1, "name": "atlas-api", "status": "active", "owner": "Bob Smith", "repo": "git@git.acme-tech.internal:platform/atlas-api.git"},
+    {"id": 2, "name": "edge-gateway", "status": "active", "owner": "Alice Johnson", "repo": "git@git.acme-tech.internal:infra/edge-gateway.git"},
+    {"id": 3, "name": "payroll-sync", "status": "maintenance", "owner": "Maria Garcia", "repo": "git@git.acme-tech.internal:finance/payroll-sync.git"},
+    {"id": 4, "name": "zero-trust-vpn", "status": "planning", "owner": "David Lee", "repo": "git@git.acme-tech.internal:security/zero-trust-vpn.git"}
+  ],
+  "servers": [
+    {"id": 1, "hostname": "build-server-01", "ip": "10.0.5.18", "role": "ci-build", "env": "prod"},
+    {"id": 2, "hostname": "db-primary-01", "ip": "10.0.5.40", "role": "mysql-primary", "env": "prod"},
+    {"id": 3, "hostname": "web-portal-01", "ip": "10.0.5.22", "role": "employee-portal", "env": "prod"},
+    {"id": 4, "hostname": "jenkins-01", "ip": "10.0.5.30", "role": "ci", "env": "prod"},
+    {"id": 5, "hostname": "redis-cache-01", "ip": "10.0.5.55", "role": "cache", "env": "prod"}
+  ]
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }}</title>
+  <style>
+    :root {
+      --ink: #10233f;
+      --muted: #5b6f8a;
+      --bg: #eef3f8;
+      --card: #ffffff;
+      --accent: #0b6bcb;
+      --line: #d5e0ec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(11,107,203,0.08), transparent 28%),
+        var(--bg);
+      min-height: 100vh;
+    }
+    header {
+      background: #0b1f38;
+      color: #fff;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header strong { letter-spacing: 0.04em; }
+    nav a { color: #c9d7ea; margin-left: 1rem; text-decoration: none; font-size: 0.92rem; }
+    nav a:hover { color: #fff; }
+    main { max-width: 960px; margin: 2.5rem auto; padding: 0 1.25rem; }
+    h1 { margin: 0 0 0.5rem; font-size: 2rem; }
+    p { color: var(--muted); line-height: 1.55; }
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(16,35,63,0.06);
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1.25rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.7rem 1.15rem;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .meta { margin-top: 1.5rem; font-size: 0.9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Acme Technologies</strong>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/login">Login</a>
+      <a href="/announcements">Announcements</a>
+      <a href="/helpdesk">IT Helpdesk</a>
+      <a href="/hr">HR</a>
+      <a href="/finance">Finance</a>
+    </nav>
+  </header>
+  <main>
+    <div class="hero">
+      <h1>Acme Employee Portal</h1>
+      <p>Internal access for Engineering, DevOps, Finance, HR, and Security. All activity is monitored by Corporate Security.</p>
+      <a class="cta" href="/login">Employee Login</a>
+      <div class="meta">Company directory · 420 employees · Austin HQ · Cloud Software</div>
+    </div>
+  </main>
+</body>
+</html>

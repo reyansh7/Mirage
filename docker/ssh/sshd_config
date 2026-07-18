@@ -1,0 +1,20 @@
+Port 22
+Protocol 2
+PermitRootLogin yes
+PasswordAuthentication yes
+PubkeyAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding no
+AllowTcpForwarding no
+PermitTunnel no
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
+LogLevel VERBOSE
+SyslogFacility AUTH
+MaxAuthTries 6
+LoginGraceTime 60
+
+# Every interactive login is trapped into the fake world shell
+ForceCommand /opt/fake_shell.py
