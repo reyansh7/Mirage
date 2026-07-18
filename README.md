@@ -1,6 +1,8 @@
-# Adaptive Honeypot — Phase 1–3
+# Mirage
 
-Dockerized honeynet with a **static fake world** (Acme Technologies) and a **session / event flight recorder**. No AI, LangGraph, or RAG.
+An AI-powered adaptive cyber deception platform that creates realistic enterprise environments to detect, analyze, and mislead attackers while providing real-time behavioral intelligence and threat analytics.
+
+**Current build (Phases 1–3):** Dockerized honeynet with a static fake world (Acme Technologies) and a session / event flight recorder. AI / LangGraph / RAG are not enabled yet.
 
 ## Architecture
 
